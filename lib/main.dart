@@ -1,4 +1,4 @@
-import 'package:animated_app/pages/notificacion_page.dart';
+
 import 'package:animated_app/pages/pagina1_page.dart';
 import 'package:flutter/material.dart';
  
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: NotificacionPage(),
+      home: Pagina1Page(),
     );
   }
 }

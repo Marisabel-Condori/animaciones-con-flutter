@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:animated_app/pages/notificacion_page.dart';
 import 'package:animated_app/pages/twitter_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,9 @@ class Pagina1Page extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.play_circle_filled),
-        onPressed: (){}
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => NotificacionPage(),));
+        }
       ),
     );
   }
