@@ -1,3 +1,5 @@
+import 'package:animate_do/animate_do.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -10,7 +12,12 @@ class Pagina1Page extends StatelessWidget {
         title: Text('Animated'),
         actions: [
           IconButton(icon: FaIcon(FontAwesomeIcons.twitter), onPressed: () {  }),
-          IconButton(icon: Icon(Icons.navigate_next) ,onPressed: (){},)
+          IconButton(
+            icon: Icon(Icons.navigate_next) ,
+            onPressed: (){
+              Navigator.push(context, CupertinoPageRoute(builder: (context) => Pagina1Page(),));
+            }
+          )
         ],
       ),
       body: Center(
@@ -18,9 +25,18 @@ class Pagina1Page extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.new_releases, color: Colors.blue,),
-            Text('Titulo', style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.w200),),
-            Text('texto pequeño', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w200),),
-            Container(height: 2.0, width: 200.0, color: Colors.blue,)
+            FadeInDown(
+              delay: Duration(milliseconds: 300),
+              child: Text('Titulo', style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.w200),)
+            ),
+            FadeInDown(
+              delay: Duration(milliseconds: 900),
+              child: Text('texto pequeño', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w200),)
+            ),
+            FadeInRight(
+              delay: Duration(milliseconds: 1200),
+              child: Container(height: 2.0, width: 200.0, color: Colors.blue,)
+            )
           ],
         ),
       ),
