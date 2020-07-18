@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:animated_app/pages/twitter_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -11,7 +12,9 @@ class Pagina1Page extends StatelessWidget {
       appBar: AppBar(
         title: Text('Animated'),
         actions: [
-          IconButton(icon: FaIcon(FontAwesomeIcons.twitter), onPressed: () {  }),
+          IconButton(icon: FaIcon(FontAwesomeIcons.twitter), onPressed: () { 
+            Navigator.push(context, MaterialPageRoute(builder: (context) => TwitterPage(),));
+           }),
           IconButton(
             icon: Icon(Icons.navigate_next) ,
             onPressed: (){

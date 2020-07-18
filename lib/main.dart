@@ -1,5 +1,4 @@
 import 'package:animated_app/pages/pagina1_page.dart';
-import 'package:animated_app/pages/twitter_page.dart';
 import 'package:flutter/material.dart';
  
 void main() => runApp(MyApp());
@@ -10,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: TwitterPage(),
+      home: Pagina1Page(),
     );
   }
 }
